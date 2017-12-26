@@ -1,0 +1,192 @@
+.form-control-custom
+{
+	/*border-radius: 10px;
+	
+	border: 10px solid #3a2121;
+	
+   margin-top: 10px;*/
+	
+	
+	
+	 /*background-image: linear-gradient(rgba(0, 51, 102, 0.5), rgba(0, 0, 51, 0.5));*/
+	
+	    border: 0;
+	height:45px;
+	background-image: linear-gradient(#03a9f4, #03a9f4), linear-gradient(#D2D2D2, #D2D2D2);
+	background-size: 0 2px, 100% 2px;
+	background-repeat: no-repeat;
+	background-position: center bottom, center calc(100% - 1px);
+	background-color: rgba(0, 0, 0, 0);
+	    transition: background 0s ease-out;
+	    box-shadow: none;
+    border-radius: 0;
+	padding-left:0px;
+}
+
+.form-control-custom:focus
+{
+  background-image: linear-gradient(#0D83DD, #0D83DD), linear-gradient( #0D83DD, #0D83DD);
+	outline: none;
+	background-size: 0 2px, 100% 2px;
+	box-shadow: none;
+	transition-duration: 0.3s;
+}
+
+.nopadding-left
+{
+	padding-left: 0px;
+}
+
+.border
+{
+	padding-bottom: 10px;
+	border-bottom: 2px solid #ff3333;
+}
+
+.border-finished
+{
+	padding-bottom: 10px;
+	border-bottom: 2px solid #73be73;
+}
+
+.well-modified
+{
+	box-shadow: 3px 3px 6px #73be73;
+	background-color: white;
+	text-overflow: ellipsis;
+	animation-name: example;
+    animation-duration: 4s;
+	animation-iteration-count: 5;
+	border:0px solid white;
+}
+
+.well-modified-unfinished
+{
+	box-shadow: 3px 3px 6px #ff3333;
+	background-color: white;
+	text-overflow: ellipsis;
+	animation-name: done-div-amnimation;
+	animation-duration: 4s;
+	animation-iteration-count: 5;
+	border:0px solid white;
+}
+
+.myBtn
+{
+	padding:1px 2px;
+}
+
+.round-button {
+    display:block;
+    width:50px;
+    height:50px;
+    line-height:50px;
+    border: 2px solid #0D83DD;
+    border-radius: 50%;
+    color:#0D83DD;
+    text-align:center;
+    text-decoration:none;
+    background: white;
+    box-shadow: 0 0 3px #0D83DD;
+    font-size:20px;
+    font-weight:bold;
+	transition: background 2s, color 2s;
+}
+.round-button:hover {
+    background: #262626;
+	color:white;
+}
+
+.fa-custom
+{
+	    padding-top: 2px;
+}
+
+
+@media screen and (max-width:480px)
+{
+	body{
+	background-color:pink;	
+	}
+	.round-button
+	{
+		display:none;
+	}
+	
+	.addTaskButton
+	{
+		background-color: aquamarine;
+		border:1px solid #ff6262; -webkit-border-radius: 3px; -moz-border-radius: 10px;border-radius: 10px;
+		text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+		color: #FFFFFF;	
+ 		background-image: linear-gradient(to bottom, #ff9a9a, #ff4040);
+	}
+	
+	.addTaskButton:hover{
+		border:1px solid #ff3434;
+ background-color: #ff6767; background-image: -webkit-gradient(linear, left top, left bottom, from(#ff6767), to(#ff0d0d));
+ background-image: -webkit-linear-gradient(top, #ff6767, #ff0d0d);
+ background-image: -moz-linear-gradient(top, #ff6767, #ff0d0d);
+ background-image: -ms-linear-gradient(top, #ff6767, #ff0d0d);
+ background-image: -o-linear-gradient(top, #ff6767, #ff0d0d);
+ background-image: linear-gradient(to bottom, #ff6767, #ff0d0d);
+	}
+}
+
+@media screen and (min-width:481px)
+{
+	.addTaskButton
+	{
+		display: none;
+		
+	}
+}
+
+.li-style{
+	list-style-type: none;
+    background: #eee;
+	transition: 0.2s;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 2px;
+	border-bottom: 2px solid rgb(136,136,136);
+	
+	
+}
+
+.li-style:hover{
+	background: rgb(136,136,136);
+}
+
+
+li:nth-child(odd) {
+   background: #eee;
+}
+li:nth-child(even) {
+    background: white;
+}
+
+ul{
+	padding-left: 0px;
+}
+
+.label-style
+{
+	display: inline-block;
+	 white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+
+@keyframes example {
+    from {box-shadow: 3px 3px 6px #006400;}
+    to {box-shadow: 3px 3px 6px #73be73;}
+}
+
+@keyframes done-div-amnimation {
+    from {box-shadow: 3px 3px 6px pink;}
+    to {box-shadow: 3px 3px 6px #ff3333;}
+}
+

@@ -1,0 +1,115 @@
+<html>
+
+<head>
+
+  <title>ToDo List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="bootstrap.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+
+<body onload="updateToDoCount(0)">
+	
+	<div class="container">
+		
+		<div class="row">
+			
+			<div class="col-md-12">
+			
+				
+				<h2>Hey !!!! What do you want to do today.....</h2>
+				
+				<form>
+					
+					<div class="form-group col-md-8 nopadding-left">
+					
+					
+  <input type="text" id="task" name="taskName" class="form-control form-control-custom" placeholder="Want to buy Mac" required >
+						
+						
+						
+					</div>
+					
+					<div class="form-group col-md-4">
+					
+					 <button id="add" name="addName" class="round-button" value="" onclick="addTask()")>
+						 <span class="fa fa-plus fa-custom"></span>
+						</button>
+						
+						
+						<input id="add" name="addTaskBtn" type="button" class="addTaskButton btn btn-block" value="Add Now" onclick="addTask()">
+					
+					</div>
+
+
+ 
+					
+					
+					</form>
+				
+				</div>
+			
+			<div class="col-md-6">
+				<div class="well well-modified-unfinished">
+					
+					
+					
+					
+					
+					<div class="row">
+					
+				<div class="col-md-12">
+				
+				  <h5 class="border">Unfinished Task Details (Pending Tasks- <span id="todoCount"></span>)  </h5>
+
+  <div id="divy">
+	  
+	  <ul id="taskDetails"></ul>
+	  
+	  </div>
+
+					</div>
+
+  </div>
+					
+					</div>
+			
+			
+			</div>
+
+<div class="col-md-6">
+	<div class="well well-modified">
+	<div id="divyy">
+		<div class="row">
+			<div class="col-md-12">
+		<h5 class="border-finished">Completed Tasks</h5>
+	
+		<ul id="completedTasksUl">
+		
+		
+		</ul>
+		
+	</div>
+			
+			</div>
+		
+		</div>
+		
+		</div>
+	</div>
+			
+			
+			
+			
+
+			</div>
+</div>
+
+</body>
+
+</html>
