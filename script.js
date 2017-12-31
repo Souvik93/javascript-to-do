@@ -11,6 +11,48 @@ var fVal = document.getElementById("task");
 
 var taskInput = document.getElementById("task");
 
+function weather()
+{
+    
+var url = 'http://api.apixu.com/v1/current.json?key=23319fb777b04d468cc173118173112&q='+document.getElementById("search").value;
+alert(url);
+var req = new Request(url);
+    fetch(url)
+  .then((resp) => resp.json())
+  .then(function(data) {
+        
+        console.log(data.current);
+        var liElement = document.createElement('li');
+        var span=document.createElement('span');
+        span.innerText= "Region: "+ data.location.region + ",Current Temperature:"+data.current.temp_c;
+        span.classList.add("span-style");
+        liElement.className="weather-li";
+        var h2=document.createElement("H3");
+        h2.innerText=data.location.name;
+        h2.classList.add("h2-style");
+        
+        liElement.appendChild(h2);
+        liElement.appendChild(span);
+        
+        //console.log(document.getElementById("weatherUl").hasChildNodes);
+        if(document.getElementById("weatherUl").hasChildNodes)
+            {
+                var textnode = document.createTextNode("Water");
+        document.getElementById("weatherUl").replaceChild(liElement,document.getElementById("weatherUl").firstChild);
+            }
+        
+        else{
+            document.getElementById("weatherUl").appendChild(liElement);
+        }
+        
+    
+    })
+  
+  .catch(function(error) {
+    console.log(error);
+  });  
+    
+}
 
 
 function updateToDoCount(size) {
@@ -19,6 +61,8 @@ function updateToDoCount(size) {
 
     todoCounts = size;
     document.getElementById("todoCount").innerHTML = todoCounts;
+    
+
 
 }
 

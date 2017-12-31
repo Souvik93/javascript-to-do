@@ -192,3 +192,21 @@ ul{
     to {box-shadow: 3px 3px 6px #ff3333;}
 }
 
+.span-style
+{
+    color:#73be73;
+    font-weight: bold;
+}
+
+.h2-style
+{
+    color:#ff3333;
+    font-weight: bold;
+}
+
+.weather-li
+{
+    list-style: none;
+    background-color: white !important;
+}
+
