@@ -15,7 +15,6 @@ function weather()
 {
     
 var url = 'http://api.apixu.com/v1/current.json?key=23319fb777b04d468cc173118173112&q='+document.getElementById("search").value;
-alert(url);
 var req = new Request(url);
     fetch(url)
   .then((resp) => resp.json())
@@ -24,6 +23,14 @@ var req = new Request(url);
         console.log(data.current);
         var liElement = document.createElement('li');
         var span=document.createElement('span');
+        var span2=document.createElement("h5");
+        var img=document.createElement("img");
+        var label=document.createElement("label");
+        label.innerText=data.current.condition.text; 
+        span2.classList.add("h5-style");
+        span2.appendChild(label);
+        img.src=data.current.condition.icon;
+        span2.appendChild(img);
         span.innerText= "Region: "+ data.location.region + ",Current Temperature:"+data.current.temp_c;
         span.classList.add("span-style");
         liElement.className="weather-li";
@@ -33,6 +40,7 @@ var req = new Request(url);
         
         liElement.appendChild(h2);
         liElement.appendChild(span);
+        liElement.appendChild(span2);
         
         //console.log(document.getElementById("weatherUl").hasChildNodes);
         if(document.getElementById("weatherUl").hasChildNodes)
@@ -49,6 +57,8 @@ var req = new Request(url);
     })
   
   .catch(function(error) {
+        alert("Invalid City Name");
+        document.getElementById("weatherUl").innerHTML="";
     console.log(error);
   });  
     
